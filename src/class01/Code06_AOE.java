@@ -41,6 +41,7 @@ public class Code06_AOE {
 		}
 	}
 
+	// 检查left...left+range范围内的怪兽是否还有血
 	public static boolean hasHp(int[] x, int[] hp, int left, int range) {
 		for (int index = left; index < x.length && x[index] - x[left] <= range; index++) {
 			if (hp[index] > 0) {
@@ -50,12 +51,14 @@ public class Code06_AOE {
 		return false;
 	}
 
+	// 给left...left+range范围内的怪兽都减1滴血
 	public static void minusOneHp(int[] x, int[] hp, int left, int range) {
 		for (int index = left; index < x.length && x[index] - x[left] <= range; index++) {
 			hp[index]--;
 		}
 	}
 
+	// 给left...left+range范围内的怪兽都加1滴血
 	public static void addOneHp(int[] x, int[] hp, int left, int range) {
 		for (int index = left; index < x.length && x[index] - x[left] <= range; index++) {
 			hp[index]++;
