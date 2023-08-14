@@ -29,6 +29,13 @@ public class Code02_Cola {
 		return puts;
 	}
 
+	/**
+	 *
+	 * @param qian 面值数组
+	 * @param zhang 张数数组
+	 * @param rest 可乐还需要的费用
+	 * @return 购买rest费用的可乐还要投递多少次硬币
+	 */
 	public static int buy(int[] qian, int[] zhang, int rest) {
 		int first = -1;
 		for (int i = 0; i < 3; i++) {
@@ -37,9 +44,17 @@ public class Code02_Cola {
 				break;
 			}
 		}
+		/*
+		  如果所有面值的张数都为0，则无法购买可乐
+		  返回-1
+		 */
 		if (first == -1) {
 			return -1;
 		}
+		/*
+		当面值可以覆盖剩余的可乐费用返回
+		用first面值的钱去购买
+		 */
 		if (qian[first] >= rest) {
 			zhang[first]--;
 			giveRest(qian, zhang, first + 1, qian[first] - rest, 1);
