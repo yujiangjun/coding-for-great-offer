@@ -129,6 +129,14 @@ public class Code02_Cola {
 		return m == 0 ? puts : -1;
 	}
 
+	/**
+	 *
+	 * @param qian 面值数组
+	 * @param zhang 张数数组
+	 * @param i 索引
+	 * @param oneTimeRest 售货机吐出的总钱数
+	 * @param times 次数
+	 */
 	public static void giveRest(int[] qian, int[] zhang, int i, int oneTimeRest, int times) {
 		for (; i < 3; i++) {
 			zhang[i] += (oneTimeRest / qian[i]) * times;
