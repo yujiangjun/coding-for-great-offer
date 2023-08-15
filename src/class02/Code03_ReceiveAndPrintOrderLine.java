@@ -31,19 +31,27 @@ public class Code03_ReceiveAndPrintOrderLine {
 			}
 			Node cur = new Node(info);
 			// num~num
+			// headMap 存放头指针
 			headMap.put(num, cur);
+			// tailMap 存放尾指针
 			tailMap.put(num, cur);
 			// 建立了num~num这个连续区间的头和尾
 			// 查询有没有某个连续区间以num-1结尾
 			if (tailMap.containsKey(num - 1)) {
+				// num-1的next指向cur
 				tailMap.get(num - 1).next = cur;
+				// num-1 不再是尾指针,所以移除
 				tailMap.remove(num - 1);
+				// cur不再是头指针,所以移除
 				headMap.remove(num);
 			}
 			// 查询有没有某个连续区间以num+1开头的
 			if (headMap.containsKey(num + 1)) {
+				// cur的next指向num+1
 				cur.next = headMap.get(num + 1);
+				// cur不再是尾指针,移除
 				tailMap.remove(num);
+				// num+1不再是头指针,移除
 				headMap.remove(num + 1);
 			}
 			if (num == waitPoint) {
