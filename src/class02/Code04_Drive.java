@@ -26,9 +26,11 @@ public class Code04_Drive {
 		}
 		// 还剩下司机！
 		if (income.length - index == rest) {
+			// 只能去A区域
 			return income[index][0] + process1(income, index + 1, rest - 1);
 		}
 		if (rest == 0) {
+			// 只能去B区域
 			return income[index][1] + process1(income, index + 1, rest);
 		}
 		// 当前司机，可以去A，或者去B
