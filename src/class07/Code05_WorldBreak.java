@@ -95,6 +95,9 @@ public class Code05_WorldBreak {
 		if (str == null || str.length() == 0 || arr == null || arr.length == 0) {
 			return 0;
 		}
+		/*
+		构建前缀树
+		 */
 		Node root = new Node();
 		for (String s : arr) {
 			char[] chs = s.toCharArray();
