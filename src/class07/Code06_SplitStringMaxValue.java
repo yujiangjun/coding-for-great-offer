@@ -106,7 +106,9 @@ public class Code06_SplitStringMaxValue {
 			value = -1;
 		}
 	}
-
+	/*
+        构建前缀树
+         */
 	public static TrieNode rootNode(String[] parts, int[] record) {
 		TrieNode root = new TrieNode();
 		for (int i = 0; i < parts.length; i++) {
