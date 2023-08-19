@@ -92,9 +92,11 @@ public class Code01_LightProblem {
 	}
 
 	// 当前在哪个位置上，做选择，nextIndex - 1 = cur ，当前！
-	// cur - 1 preStatus
+	// cur - 1的状态= preStatus
 	// cur  curStatus
-	// 0....cur-2  全亮的！
+	// 0....cur-2  全亮的！（潜台词）
+	// cur 灯只影响 cur-1 cur cur+1
+	// 所以 0... cur-2的灯状态后续无法改变
 	public static int process1(int[] arr, int nextIndex, int preStatus, int curStatus) {
 		if (nextIndex == arr.length) { // 当前来到最后一个开关的位置
 			return preStatus != curStatus ? (Integer.MAX_VALUE) : (curStatus ^ 1);
