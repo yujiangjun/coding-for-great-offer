@@ -94,6 +94,7 @@ public class Code03_FindWordInMatrix {
 				|| noLoop(m, i, j - 1, str, k + 1)) {
 			ans = true;
 		}
+		// 恢复现场
 		m[i][j] = str[k];
 		return ans;
 	}

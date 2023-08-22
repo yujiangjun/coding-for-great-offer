@@ -3,6 +3,9 @@ package class08;
 // 本题测试链接 : https://leetcode.com/problems/container-with-most-water/
 public class Code02_ContainerWithMostWater {
 
+	/*
+	从i+1开始寻找和i位置相比较小的柱子，求出面积的最大值
+	 */
 	public static int maxArea1(int[] h) {
 		int max = 0;
 		int N = h.length;
