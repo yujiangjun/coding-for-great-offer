@@ -15,6 +15,7 @@ public class Code04_MaxPairNumber {
 		return process1(arr, 0, k);
 	}
 
+	// 从index开始，如果2个人的能力值差为k可以组成比赛，同时可以有多少比赛
 	public static int process1(int[] arr, int index, int k) {
 		int ans = 0;
 		if (index == arr.length) {
