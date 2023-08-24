@@ -109,6 +109,10 @@ public class Code02_TopK {
 		return ans;
 	}
 
+	/**
+	 * 上移
+	 * @param index
+	 */
 	private void heapInsert(int index) {
 		while (index != 0) {
 			int parent = (index - 1) / 2;
@@ -121,6 +125,11 @@ public class Code02_TopK {
 		}
 	}
 
+	/**
+	 * 下沉
+	 * @param index
+	 * @param heapSize
+	 */
 	private void heapify(int index, int heapSize) {
 		int l = index * 2 + 1;
 		int r = index * 2 + 2;
