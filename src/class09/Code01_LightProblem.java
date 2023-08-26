@@ -35,6 +35,7 @@ public class Code01_LightProblem {
 		return f1(arr, 0);
 	}
 
+	// i 以及往后的灯都点亮，最少需要按下几次开关
 	public static int f1(int[] arr, int i) {
 		if (i == arr.length) {
 			return valid(arr) ? 0 : Integer.MAX_VALUE;
@@ -47,6 +48,7 @@ public class Code01_LightProblem {
 		return Math.min(p1, p2);
 	}
 
+	// i位置按下开关
 	public static void change1(int[] arr, int i) {
 		if (i == 0) {
 			arr[0] ^= 1;
@@ -103,6 +105,9 @@ public class Code01_LightProblem {
 		}
 		// 没到最后一个按钮呢！
 		// i < arr.length
+		// preStatus=0,当前需要按下开关，因为如果当前不按下开关，pre的位置永远是不亮的，
+		// 后续无法在改变pre的状态
+		// 当前要做改变
 		if (preStatus == 0) { // 一定要改变
 			curStatus ^= 1;
 			int cur = arr[nextIndex] ^ 1;
@@ -132,7 +137,7 @@ public class Code01_LightProblem {
 
 	public static int traceNoLoop(int[] arr, int preStatus, int curStatus) {
 		int i = 2;
-		int op = 0;
+		int op = 0; // 按下快关的次数
 		while (i != arr.length) {
 			if (preStatus == 0) {
 				op++;
@@ -224,6 +229,8 @@ public class Code01_LightProblem {
 	// 返回，让所有灯都亮，至少按下几次按钮
 	
 	// 当前来到的位置(nextIndex - 1)，一定不能是1！至少从2开始
+	// 如果是从1开始，那么0位置被1影响，但是当来到n-1位置时，0位置也被n-1影响
+	// 所有cur至少从2开始
 	// nextIndex >= 3
 	public static int process2(int[] arr, 
 			int nextIndex, int preStatus, int curStatus, 
