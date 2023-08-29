@@ -9,7 +9,7 @@ public class Code04_EnvelopesProblem {
 	public static int maxEnvelopes(int[][] matrix) {
 		Envelope[] arr = sort(matrix);
 		int[] ends = new int[matrix.length];
-		ends[0] = arr[0].h;
+		ends[0] = arr[0].height;
 		int right = 0;
 		int l = 0;
 		int r = 0;
@@ -19,32 +19,32 @@ public class Code04_EnvelopesProblem {
 			r = right;
 			while (l <= r) {
 				m = (l + r) / 2;
-				if (arr[i].h > ends[m]) {
+				if (arr[i].height > ends[m]) {
 					l = m + 1;
 				} else {
 					r = m - 1;
 				}
 			}
 			right = Math.max(right, l);
-			ends[l] = arr[i].h;
+			ends[l] = arr[i].height;
 		}
 		return right + 1;
 	}
 
 	public static class Envelope {
-		public int l;
-		public int h;
+		private final int weight;
+		private final int height;
 
-		public Envelope(int weight, int hight) {
-			l = weight;
-			h = hight;
+		public Envelope(int weight, int height) {
+			this.weight = weight;
+			this.height = height;
 		}
 	}
 
 	public static class EnvelopeComparator implements Comparator<Envelope> {
 		@Override
 		public int compare(Envelope o1, Envelope o2) {
-			return o1.l != o2.l ? o1.l - o2.l : o2.h - o1.h;
+			return o1.weight != o2.weight ? o1.weight - o2.weight : o2.height - o1.height;
 		}
 	}
 
