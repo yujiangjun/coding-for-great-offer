@@ -7,6 +7,8 @@ public class Code01_BestTimeToBuyAndSellStock {
 		if (prices == null || prices.length == 0) {
 			return 0;
 		}
+		//必须在i时刻卖掉的最大收益
+		//那么找到在0~i时刻的最小价格p,price[i]-p就是在i时刻卖掉的最大收益
 		// 必须在0时刻卖掉，[0] - [0]
 		int ans = 0;
 		// arr[0...0]
