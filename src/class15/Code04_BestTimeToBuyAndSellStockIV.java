@@ -11,9 +11,77 @@ public class Code04_BestTimeToBuyAndSellStockIV {
 		if (K >= N / 2) {
 			return allTrans(prices);
 		}
+		/*
+		 dp[i][j] =p 表示0..i位置最多交易j次的最大收益
+		 dp[6][3]表示0..6范围内最多交易3次的最大收益是多少
+		 1. 6位置不参与计算 则dp[6][3]=dp[5][3]
+		 2. 6位置参与计算 那么在6位置卖出 有如下几种可能
+		 a. 6位置买入，6位置卖出 dp[6][3]=dp[6][2]+prices[6]-prices[6]
+		 b. 5位置买入，6位置卖出 dp[6][3]=dp[5][2]+prices[6]-prices[5]
+		 c. 4位置买入，6位置卖出 dp[6][3]=dp[4][2]+prices[6]-prices[4]
+		 d. 3位置买入，6位置卖出 dp[6][3]=dp[3][2]+prices[6]-prices[3]
+		 e. 2位置买入，6位置卖出 dp[6][3]=dp[2][2]+prices[6]-prices[2]
+		 f. 1位置买入，6位置卖出 dp[6][3]=dp[1][2]+prices[6]-prices[1]
+		 g. 0位置买入，6位置卖出 dp[6][3]=dp[0][2]+prices[6]-prices[0]
+		 dp[5][3]
+		 1. 5位置不参与计算 则dp[5][3]=dp[4][3]
+		 2. 5位置参与计算 那么在5位置卖出 有如下几种可能
+		 a. 5位置买入，5位置卖出 dp[5][3]=dp[5][2]+prices[5]-prices[5]
+		 b. 4位置买入，6位置卖出 dp[5][3]=dp[4][2]+prices[5]-prices[4]
+		 c. 3位置买入，6位置卖出 dp[5][3]=dp[3][2]+prices[5]-prices[3]
+		 d. 2位置买入，6位置卖出 dp[5][3]=dp[2][2]+prices[5]-prices[2]
+		 e. 1位置买入，6位置卖出 dp[5][3]=dp[1][2]+prices[5]-prices[1]
+		 f. 0位置买入，6位置卖出 dp[5][3]=dp[0][2]+prices[5]-prices[0]
+
+		 best[6][3]=Max{
+			 (dp[6][2]-prices[6]),
+			 (dp[5][2]-prices[5]),
+			 (dp[4][2]-prices[4]),
+			 (dp[3][2]-prices[3]),
+			 (dp[2][2]-prices[2]),
+			 (dp[1][2]-prices[1]),
+			 (dp[0][2]-prices[0]),
+		 }=Max{
+			 (dp[6][2]-prices[6]),
+			 (dp[5][2]-prices[5]),
+			 (dp[4][2]-prices[4]),
+			 (dp[3][2]-prices[3]),
+			 (dp[2][2]-prices[2]),
+			 (dp[1][2]-prices[1])
+			 (dp[0][2]-prices[0])
+		 }
+		 dp[6][3]=Max{best+prices[6],dp[5][3]}
+
+		 best[5][3]=Max{
+			 (dp[5][2]-prices[5]),
+			 (dp[4][2]-prices[4]),
+			 (dp[3][2]-prices[3]),
+			 (dp[2][2]-prices[2]),
+			 (dp[1][2]-prices[1]),
+			 (dp[0][2]-prices[0])
+		 }=Max{
+		 	 (dp[5][2]-prices[5]),
+		 	 (dp[4][2]-prices[4]),
+			 (dp[3][2]-prices[3]),
+			 (dp[2][2]-prices[2]),
+			 (dp[1][2]-prices[1]),
+			 (dp[0][2]-prices[0])
+		 }
+		 所以best[6][3]=Max{best[5][3],dp[5][2]-prices[6]}
+
+		 baseCase: dp[0..k][0]=0
+		 dp[0][0..n-1]=0
+		 */
 		int[][] dp = new int[K + 1][N];
 		int ans = 0;
 		for (int tran = 1; tran <= K; tran++) {
+			/*
+			 dp[tran][0]
+			 在0..0范围上进行最多tran次交易
+			 1 0位置不参与即dp[tran][0]
+			 2.0位置参与 只有一种情况，即0位置买入，0位置卖出
+			 所以best=dp[tran][0]-prices[0]
+			 */
 			int pre = dp[tran][0];
 			int best = pre - prices[0];
 			for (int index = 1; index < N; index++) {
