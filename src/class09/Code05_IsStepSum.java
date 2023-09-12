@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class Code05_IsStepSum {
 
+	// 二分查找
 	public static boolean isStepSum(int stepSum) {
 		int L = 0;
 		int R = stepSum;

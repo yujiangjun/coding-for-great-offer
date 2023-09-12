@@ -13,10 +13,28 @@ public class Code01_MinimumInsertionStepsToMakeAStringPalindrome {
 		}
 		char[] str = s.toCharArray();
 		int N = str.length;
+		/*
+		dp[i][j]=p表示从i到j范围内插入字符串需要的最少次数
+		dp[i][i]=0
+		dp[i][i+1]=1或者0（str[i]=str[i+1] 为1 否则为0）
+		 */
 		int[][] dp = new int[N][N];
 		for (int i = 0; i < N - 1; i++) {
 			dp[i][i + 1] = str[i] == str[i + 1] ? 0 : 1;
 		}
+		/*
+		 eg: ....a b c b c...
+		     ....5 6 7 8 9...
+		     1. 6-9 变成回文串  然后在c后面插入a,dp[5][9]=dp[6][9]+1
+		     2. 5-8 变成回文串 然后在a前面插入c ,dp[5][9]=dp[5][8]+1
+		      ....a b c b a...
+		      ....5 6 7 8 9... dp[5][9]=dp[6][8]
+		      针对上面这种情况
+		      直接求6-8变成回文串的次数即可
+		      所以dp[i][j]=MIN(dp[i][j-1],dp[i+1][j])+1
+		      if str[i]==str[j]
+		        dp[i][j]=MIN(dp[i][j],dp[i+1][j-1])
+		 */
 		for (int i = N - 3; i >= 0; i--) {
 			for (int j = i + 2; j < N; j++) {
 				dp[i][j] = Math.min(dp[i][j - 1], dp[i + 1][j]) + 1;
@@ -54,13 +72,14 @@ public class Code01_MinimumInsertionStepsToMakeAStringPalindrome {
 		int ansl = 0;
 		int ansr = ans.length - 1;
 		while (L < R) {
+			// 在L-1上添加一个str[R]
 			if (dp[L][R - 1] == dp[L][R] - 1) {
 				ans[ansl++] = str[R];
 				ans[ansr--] = str[R--];
-			} else if (dp[L + 1][R] == dp[L][R] - 1) {
+			} else if (dp[L + 1][R] == dp[L][R] - 1) { // R+1添加str[L]
 				ans[ansl++] = str[L];
 				ans[ansr--] = str[L++];
-			} else {
+			} else {// str[L]=str[R]
 				ans[ansl++] = str[L++];
 				ans[ansr--] = str[R--];
 			}

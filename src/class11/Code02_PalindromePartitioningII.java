@@ -14,12 +14,17 @@ public class Code02_PalindromePartitioningII {
 		char[] str = s.toCharArray();
 		int N = str.length;
 		boolean[][] checkMap = createCheckMap(str, N);
+		//dp[i]=p表示从第i个字符开始一直到最后分割的字符串都是回文串，最少分割的分数是p
+		// 核心点是求出每次分割是回文串的结束位置p
+		// 下一次回文串的开始位置时p+1
 		int[] dp = new int[N + 1];
 		dp[N] = 0;
 		for (int i = N - 1; i >= 0; i--) {
+			// 如果i..n-1是回文串，那么就无需分割，那么分数是1
 			if (checkMap[i][N - 1]) {
 				dp[i] = 1;
 			} else {
+				//// 如果i..n-1是不是回文串，那么从i开始一直到n-1,判断是i,j是不是回文串
 				int next = Integer.MAX_VALUE;
 				for (int j = i; j < N; j++) {
 					if (checkMap[i][j]) {

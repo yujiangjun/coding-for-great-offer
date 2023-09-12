@@ -15,8 +15,8 @@ public class Code05_BooleanEvaluation {
 	}
 
 	public static class Info {
-		public int t;
-		public int f;
+		public int t; // 返回是true 的方法数
+		public int f; // 返回是false的方法数
 
 		public Info(int tr, int fa) {
 			t = tr;
