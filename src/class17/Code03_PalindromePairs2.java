@@ -9,7 +9,7 @@ import java.util.List;
 // 在算法周更班 : https://www.mashibing.com/live/1240
 // 字符串哈希代码 : https://github.com/algorithmzuo/weekly-problems/blob/main/src/class_2023_05_5_week/Code04_StringHash.java
 // 2023年5月第5周的课，看会！
-// 本题测试链接 : https://leetcode.com/problems/palindrome-pairs/
+// 本题测试链接 : https://leetcode.cn/problems/palindrome-pairs/
 // 字符串哈希 + Manacher算法！打败95%的人！
 public class Code03_PalindromePairs2 {
 

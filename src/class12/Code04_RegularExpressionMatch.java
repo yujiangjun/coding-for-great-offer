@@ -1,6 +1,6 @@
 package class12;
 
-// 测试链接 : https://leetcode.com/problems/regular-expression-matching/
+// 测试链接 : https://leetcode.cn/problems/regular-expression-matching/
 public class Code04_RegularExpressionMatch {
 
 	// 暴力递归

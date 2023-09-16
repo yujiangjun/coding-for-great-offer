@@ -1,6 +1,6 @@
 package class07;
 
-// 测试链接 : https://leetcode.com/problems/maximum-gap/
+// 测试链接 : https://leetcode.cn/problems/maximum-gap/
 public class Code03_MaxGap {
 
 	public static int maximumGap(int[] nums) {

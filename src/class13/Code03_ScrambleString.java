@@ -1,6 +1,6 @@
 package class13;
 
-// 本题测试链接 : https://leetcode.com/problems/scramble-string/
+// 本题测试链接 : https://leetcode.cn/problems/scramble-string/
 public class Code03_ScrambleString {
 
 	public static boolean isScramble0(String s1, String s2) {

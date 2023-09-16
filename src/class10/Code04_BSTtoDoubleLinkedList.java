@@ -1,6 +1,6 @@
 package class10;
 
-// 本题测试链接 : https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/
+// 本题测试链接 : https://leetcode.cn/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/
 public class Code04_BSTtoDoubleLinkedList {
 
 	// 提交时不要提交这个类

@@ -1,7 +1,7 @@
 package class36;
 
 // 来自哈喽单车
-// 本题是leetcode原题 : https://leetcode.com/problems/stone-game-iv/
+// 本题是leetcode原题 : https://leetcode.cn/problems/stone-game-iv/
 public class Code10_StoneGameIV {
 
 	// 当前的！先手，会不会赢

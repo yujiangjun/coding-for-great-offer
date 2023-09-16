@@ -1,6 +1,6 @@
 package class08;
 
-// 本题测试链接 : https://leetcode.com/problems/container-with-most-water/
+// 本题测试链接 : https://leetcode.cn/problems/container-with-most-water/
 public class Code02_ContainerWithMostWater {
 
 	/*

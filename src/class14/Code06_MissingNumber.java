@@ -1,6 +1,6 @@
 package class14;
 
-// 测试链接：https://leetcode.com/problems/first-missing-positive/
+// 测试链接：https://leetcode.cn/problems/first-missing-positive/
 public class Code06_MissingNumber {
 
 	public static int firstMissingPositive(int[] arr) {

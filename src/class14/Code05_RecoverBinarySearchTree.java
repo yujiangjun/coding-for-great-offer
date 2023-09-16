@@ -2,7 +2,7 @@ package class14;
 
 import java.util.Stack;
 
-// 本题测试链接 : https://leetcode.com/problems/recover-binary-search-tree/
+// 本题测试链接 : https://leetcode.cn/problems/recover-binary-search-tree/
 public class Code05_RecoverBinarySearchTree {
 
 	// 不要提交这个类

@@ -2,7 +2,7 @@ package class19;
 
 import java.util.HashMap;
 
-// 本题测试链接 : https://leetcode.com/problems/lru-cache/
+// 本题测试链接 : https://leetcode.cn/problems/lru-cache/
 // 提交时把类名和构造方法名改成 : LRUCache
 public class Code01_LRUCache {
 

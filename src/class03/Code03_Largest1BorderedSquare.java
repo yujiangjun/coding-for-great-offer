@@ -1,6 +1,6 @@
 package class03;
 
-// 本题测试链接 : https://leetcode.com/problems/largest-1-bordered-square/
+// 本题测试链接 : https://leetcode.cn/problems/largest-1-bordered-square/
 public class Code03_Largest1BorderedSquare {
 
 	public static int largest1BorderedSquare(int[][] m) {

@@ -2,7 +2,7 @@ package class03;
 
 import java.util.Arrays;
 
-// 本题测试链接 : https://leetcode.com/problems/closest-subsequence-sum/
+// 本题测试链接 : https://leetcode.cn/problems/closest-subsequence-sum/
 // 本题数据量描述:
 // 1 <= nums.length <= 40
 // -10^7 <= nums[i] <= 10^7

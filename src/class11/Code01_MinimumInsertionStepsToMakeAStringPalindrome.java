@@ -3,7 +3,7 @@ package class11;
 import java.util.ArrayList;
 import java.util.List;
 
-// 本题测试链接 : https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/
+// 本题测试链接 : https://leetcode.cn/problems/minimum-insertion-steps-to-make-a-string-palindrome/
 public class Code01_MinimumInsertionStepsToMakeAStringPalindrome {
 
 	// 测试链接只测了本题的第一问，直接提交可以通过

@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.TreeSet;
 
-// 本题测试链接 : https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/
+// 本题测试链接 : https://leetcode.cn/problems/smallest-range-covering-elements-from-k-lists/
 public class Code04_SmallestRangeCoveringElementsfromKLists {
 
 	public static class Node {

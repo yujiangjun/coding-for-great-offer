@@ -1,6 +1,6 @@
 package class13;
 
-// 本题测试链接 : https://leetcode.com/problems/bricks-falling-when-hit/
+// 本题测试链接 : https://leetcode.cn/problems/bricks-falling-when-hit/
 public class Code04_BricksFallingWhenHit {
 
 	public static int[] hitBricks(int[][] grid, int[][] hits) {

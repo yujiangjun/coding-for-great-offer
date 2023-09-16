@@ -3,7 +3,7 @@ package class26;
 import java.util.LinkedList;
 import java.util.List;
 
-// 本题测试链接 : https://leetcode.com/problems/expression-add-operators/
+// 本题测试链接 : https://leetcode.cn/problems/expression-add-operators/
 public class Code03_ExpressionAddOperators {
 
 	public static List<String> addOperators(String num, int target) {

@@ -2,7 +2,7 @@ package class19;
 
 import java.util.HashMap;
 
-// 本题测试链接 : https://leetcode.com/problems/lfu-cache/
+// 本题测试链接 : https://leetcode.cn/problems/lfu-cache/
 // 提交时把类名和构造方法名改为 : LFUCache
 public class Code02_LFUCache {
 

@@ -1,6 +1,6 @@
 package class22;
 
-// 本题测试链接 : https://leetcode.com/problems/trapping-rain-water/
+// 本题测试链接 : https://leetcode.cn/problems/trapping-rain-water/
 public class Code02_TrappingRainWater {
 
 	public static int trap(int[] arr) {

@@ -8,7 +8,7 @@ import java.util.List;
 // 课上讲了哈希表+manacher
 // 有关manacher的解释，看这个帖子 : https://www.mashibing.com/question/detail/56727
 // 从代码层次讲了一下，例子非常详细
-// 测试链接 : https://leetcode.com/problems/palindrome-pairs/
+// 测试链接 : https://leetcode.cn/problems/palindrome-pairs/
 public class Code03_PalindromePairs1 {
 
 	public static List<List<Integer>> palindromePairs(String[] words) {

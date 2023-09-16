@@ -2,7 +2,7 @@ package class22;
 
 import java.util.PriorityQueue;
 
-// 本题测试链接 : https://leetcode.com/problems/trapping-rain-water-ii/
+// 本题测试链接 : https://leetcode.cn/problems/trapping-rain-water-ii/
 public class Code03_TrappingRainWaterII {
 
 	public static class Node {

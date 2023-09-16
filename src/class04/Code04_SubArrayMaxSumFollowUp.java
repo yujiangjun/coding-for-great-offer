@@ -1,6 +1,6 @@
 package class04;
 
-// 在线测试链接 : https://leetcode.com/problems/house-robber/
+// 在线测试链接 : https://leetcode.cn/problems/house-robber/
 public class Code04_SubArrayMaxSumFollowUp {
 
 	public static int rob1(int[] arr) {

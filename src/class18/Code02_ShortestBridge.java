@@ -1,6 +1,6 @@
 package class18;
 
-// 本题测试链接 : https://leetcode.com/problems/shortest-bridge/
+// 本题测试链接 : https://leetcode.cn/problems/shortest-bridge/
 public class Code02_ShortestBridge {
 
 	public static int shortestBridge(int[][] m) {

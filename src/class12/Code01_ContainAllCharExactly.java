@@ -2,7 +2,7 @@ package class12;
 
 import java.util.Arrays;
 
-// 本题测试链接 : https://leetcode.com/problems/permutation-in-string/
+// 本题测试链接 : https://leetcode.cn/problems/permutation-in-string/
 public class Code01_ContainAllCharExactly {
 
 	public static int containExactly1(String s, String a) {

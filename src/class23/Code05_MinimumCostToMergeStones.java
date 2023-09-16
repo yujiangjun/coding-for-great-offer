@@ -1,6 +1,6 @@
 package class23;
 
-// 本题测试链接 : https://leetcode.com/problems/minimum-cost-to-merge-stones/
+// 本题测试链接 : https://leetcode.cn/problems/minimum-cost-to-merge-stones/
 public class Code05_MinimumCostToMergeStones {
 
 //	// arr[L...R]一定要整出P份，合并的最小代价，返回！

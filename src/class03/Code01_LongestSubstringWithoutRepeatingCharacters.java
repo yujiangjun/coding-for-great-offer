@@ -1,6 +1,6 @@
 package class03;
 
-// 本题测试链接 : https://leetcode.com/problems/longest-substring-without-repeating-characters/
+// 本题测试链接 : https://leetcode.cn/problems/longest-substring-without-repeating-characters/
 public class Code01_LongestSubstringWithoutRepeatingCharacters {
 
 	public static int lengthOfLongestSubstring(String s) {

@@ -2,7 +2,7 @@ package class05;
 
 import java.util.Stack;
 
-// 本题测试链接 : https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/
+// 本题测试链接 : https://leetcode.cn/problems/construct-binary-search-tree-from-preorder-traversal/
 public class Code01_ConstructBinarySearchTreeFromPreorderTraversal {
 
 	// 不用提交这个类

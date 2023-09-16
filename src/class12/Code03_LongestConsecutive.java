@@ -3,7 +3,7 @@ package class12;
 import java.util.HashMap;
 import java.util.HashSet;
 
-// 本题测试链接 : https://leetcode.com/problems/longest-consecutive-sequence/
+// 本题测试链接 : https://leetcode.cn/problems/longest-consecutive-sequence/
 public class Code03_LongestConsecutive {
 
 	// 课上讲的解法

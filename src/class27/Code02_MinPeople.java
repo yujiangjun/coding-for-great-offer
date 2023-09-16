@@ -24,7 +24,7 @@ public class Code02_MinPeople {
 //  我们将这些回答放在 answers 数组里，返回鹅厂中企鹅的最少数量。
 //	输入: answers = [1]    输出：2
 //	输入: answers = [1, 1, 2]    输出：5
-//  Leetcode题目：https://leetcode.com/problems/rabbits-in-forest/
+//  Leetcode题目：https://leetcode.cn/problems/rabbits-in-forest/
 //
 //	题目三：
 //	WXG 的秘书有一堆的文件袋，现在秘书需要把文件袋嵌套收纳起来。请你帮他计算下，最大嵌套数量。

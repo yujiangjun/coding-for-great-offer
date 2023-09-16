@@ -3,7 +3,7 @@ package class17;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-// 本题测试链接 : https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/
+// 本题测试链接 : https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix/
 public class Code02_KthSmallestElementInSortedMatrix {
 
 	// 堆的方法

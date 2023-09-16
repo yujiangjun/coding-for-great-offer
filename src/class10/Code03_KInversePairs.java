@@ -1,6 +1,6 @@
 package class10;
 
-// 测试链接 : https://leetcode.com/problems/k-inverse-pairs-array/
+// 测试链接 : https://leetcode.cn/problems/k-inverse-pairs-array/
 public class Code03_KInversePairs {
 
 	public static int kInversePairs(int n, int k) {

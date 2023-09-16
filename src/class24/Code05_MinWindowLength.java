@@ -38,7 +38,7 @@ public class Code05_MinWindowLength {
 		return minLen == Integer.MAX_VALUE ? 0 : minLen;
 	}
 
-	// 测试链接 : https://leetcode.com/problems/minimum-window-substring/
+	// 测试链接 : https://leetcode.cn/problems/minimum-window-substring/
 	public static String minWindow(String s, String t) {
 		if (s.length() < t.length()) {
 			return "";

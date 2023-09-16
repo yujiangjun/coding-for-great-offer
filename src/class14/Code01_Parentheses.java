@@ -70,7 +70,7 @@ public class Code01_Parentheses {
 
 	// s只由(和)组成
 	// 求最长有效括号子串长度
-	// 本题测试链接 : https://leetcode.com/problems/longest-valid-parentheses/
+	// 本题测试链接 : https://leetcode.cn/problems/longest-valid-parentheses/
     public static int longestValidParentheses(String s) {
 		if (s == null || s.length() < 2) {
 			return 0;

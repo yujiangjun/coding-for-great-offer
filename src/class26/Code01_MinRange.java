@@ -9,7 +9,7 @@ public class Code01_MinRange {
 
 	// 本题为求最小包含区间
 	// 测试链接 :
-	// https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/
+	// https://leetcode.cn/problems/smallest-range-covering-elements-from-k-lists/
 	public static class Node {
 		public int val;
 		public int arr;

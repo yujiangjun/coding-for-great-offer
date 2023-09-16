@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-// 本题测试链接 : https://leetcode.com/problems/ip-to-cidr/
+// 本题测试链接 : https://leetcode.cn/problems/ip-to-cidr/
 public class Code01_IPToCIDR {
 
 	public static List<String> ipToCIDR(String ip, int n) {

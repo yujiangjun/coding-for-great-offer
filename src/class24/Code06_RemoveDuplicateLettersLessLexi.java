@@ -4,7 +4,7 @@ package class24;
 // 不用看课上的解释了
 // 这道题最优解是单调栈的解法
 // 看注释能看懂
-// 本题测试链接 : https://leetcode.com/problems/remove-duplicate-letters/
+// 本题测试链接 : https://leetcode.cn/problems/remove-duplicate-letters/
 public class Code06_RemoveDuplicateLettersLessLexi {
 
 	public static String removeDuplicateLetters(String s) {

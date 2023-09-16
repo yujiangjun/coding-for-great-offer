@@ -1,6 +1,6 @@
 package class04;
 
-// 本题测试链接 : https://leetcode.com/problems/maximum-subarray/
+// 本题测试链接 : https://leetcode.cn/problems/maximum-subarray/
 public class Code02_SubArrayMaxSum {
 
 	public static int maxSubArray(int[] arr) {

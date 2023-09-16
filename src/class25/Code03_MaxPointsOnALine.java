@@ -3,7 +3,7 @@ package class25;
 import java.util.HashMap;
 import java.util.Map;
 
-// 本题测试链接: https://leetcode.com/problems/max-points-on-a-line/
+// 本题测试链接: https://leetcode.cn/problems/max-points-on-a-line/
 public class Code03_MaxPointsOnALine {
 
 	// [

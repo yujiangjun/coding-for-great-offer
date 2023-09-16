@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 // 来自三七互娱
-// Leetcode原题 : https://leetcode.com/problems/bus-routes/
+// Leetcode原题 : https://leetcode.cn/problems/bus-routes/
 public class Code11_BusRoutes {
 
 	// 0 : [1,3,7,0]

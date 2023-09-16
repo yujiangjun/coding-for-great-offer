@@ -1,6 +1,6 @@
 package class25;
 
-// 本题测试链接 : https://leetcode.com/problems/gas-station/
+// 本题测试链接 : https://leetcode.cn/problems/gas-station/
 // 注意本题的实现比leetcode上的问法更加通用
 // leetcode只让返回其中一个良好出发点的位置
 // 本题是返回结果数组，每一个出发点是否是良好出发点都求出来了

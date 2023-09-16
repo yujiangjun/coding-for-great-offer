@@ -2,7 +2,7 @@ package class17;
 
 import java.util.HashMap;
 
-// 本题测试链接 : https://leetcode.com/problems/distinct-subsequences-ii/
+// 本题测试链接 : https://leetcode.cn/problems/distinct-subsequences-ii/
 public class Code05_DistinctSubseqValue {
 
 	public static int distinctSubseqII(String s) {

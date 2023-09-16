@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.TreeSet;
 
-// 本题测试链接 : https://leetcode.com/problems/freedom-trail/
+// 本题测试链接 : https://leetcode.cn/problems/freedom-trail/
 public class Code07_FreedomTrail {
 
 	// 提交时把findRotateSteps1方法名字改成findRotateSteps可以直接通过
