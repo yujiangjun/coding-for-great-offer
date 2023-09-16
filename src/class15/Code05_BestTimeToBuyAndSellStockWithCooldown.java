@@ -60,6 +60,8 @@ public class Code05_BestTimeToBuyAndSellStockWithCooldown {
 	// 这正好是sell[i - 2]所代表的含义，并且根据buy[i]的定义，最后一定要 - prices[i]
 	//
 	// sell[i] = Math.max(sell[i - 1], buy[i - 1] + prices[i])
+	// 第一种情况：i位置不参与计算 p1=sell[i-1]
+	// 第二种情况: i 位置参与计算 0-i范围内最后一次是卖行为，
 	// 如果i位置没有发生sell行为，那么sell[i] = sell[i-1]，这显而易见
 	// 如果i位置发生了sell行为，那么我们一定要找到 {之前获得尽可能好的收益 - 最后一次的收购价格尽可能低}，
 	// 而这正好是buy[i - 1]的含义！之前所有的"尽可能"中，最好的一个！
@@ -71,7 +73,7 @@ public class Code05_BestTimeToBuyAndSellStockWithCooldown {
 		int[] buy = new int[N];
 		int[] sell = new int[N];
 		// buy[0] 不需要设置  buy[0] = -arr[0]
-		// sell[0] = 0
+		// sell[0] = 0 所以以0位置结尾的卖，只能是0位置买 0位置卖，
 		buy[1] = Math.max(-prices[0], -prices[1]);
 		sell[1] = Math.max(0, prices[1] - prices[0]);
 		for (int i = 2; i < N; i++) {
