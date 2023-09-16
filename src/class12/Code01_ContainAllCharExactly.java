@@ -77,9 +77,11 @@ public class Code01_ContainAllCharExactly {
 			if (all == 0) { // R-1
 				return R - M;
 			}
+			//右边界，窗口 向右移一个，匹配上个str1,则个数减一 因为进了窗口
 			if (count[str1[R]]-- > 0) {
 				all--;
 			}
+			// 左边界 窗口向右右移一个，匹配上一个，个数加一，因为出了窗口
 			if (count[str1[R - M]]++ >= 0) {
 				all++;
 			}
