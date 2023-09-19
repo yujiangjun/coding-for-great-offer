@@ -5,6 +5,7 @@ public class Code03_FindKthMinNumber {
 
 	public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 		int size = nums1.length + nums2.length;
+		// 是不是偶数
 		boolean even = (size & 1) == 0;
 		if (nums1.length != 0 && nums2.length != 0) {
 			if (even) {
@@ -89,11 +90,20 @@ public class Code03_FindKthMinNumber {
 				}
 			} else { // 偶数长度
 				if (A[mid1] > B[mid2]) {
+					/*
+					可以得出至少前面2/k个数是s2..mid2
+					所以第k大的数应该在A[s1..mid1]或者B[mid2+1..e2]
+					 */
 					e1 = mid1;
 					s2 = mid2 + 1;
 				} else {
-					e2 = mid2;
+					/*
+					A[mid1]<=B[mid2]
+					所以得出前面至少2/k个数，A[s1..mid]
+					所以第k大的数应该在A[mid1+1..e1]或者B[s2..mid2]
+					 */
 					s1 = mid1 + 1;
+					e2 = mid2;
 				}
 			}
 		}
