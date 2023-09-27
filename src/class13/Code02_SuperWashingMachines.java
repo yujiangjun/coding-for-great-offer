@@ -18,6 +18,17 @@ public class Code02_SuperWashingMachines {
 		int avg = sum / size;
 		int leftSum = 0;
 		int ans = 0;
+		/*
+		左    i     右
+		-15         +10
+		所以i位置要进行15轮
+		左    i     右
+		+15         +7
+		所以i位置要进行15轮
+		左    i     右
+		-15         -7
+		所以i位置要进行22轮
+		 */
 		for (int i = 0; i < arr.length; i++) {
 			int leftRest = leftSum - i * avg;
 			int rightRest = (sum - leftSum - arr[i]) - (size - i - 1) * avg;

@@ -3,6 +3,13 @@ package class18;
 // 本题测试链接 : https://leetcode.cn/problems/shortest-bridge/
 public class Code02_ShortestBridge {
 
+	/*
+	定义2个和m相同大小的矩阵a1,a2
+	a1只有一片1 a2只有另一片1
+	a1上的每个1不断宽度遍历，每次加1，只能上下左右遍历
+	a2也做相同操作
+	然后比较每个i,j位置(a1+a2的值-3),然后取最小值
+	 */
 	public static int shortestBridge(int[][] m) {
 		int N = m.length;
 		int M = m[0].length;
