@@ -12,7 +12,9 @@ public class Code01_MinRange {
 	// https://leetcode.cn/problems/smallest-range-covering-elements-from-k-lists/
 	public static class Node {
 		public int val;
+		// 数组的下标
 		public int arr;
+		// val在数组中的下标
 		public int idx;
 
 		public Node(int value, int arrIndex, int index) {
