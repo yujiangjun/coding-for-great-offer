@@ -27,6 +27,8 @@ public class Code04_GasStation {
 		if (cost == null || gas == null || cost.length < 2 || cost.length != gas.length) {
 			return null;
 		}
+		// 构造纯能数组cost-gas,并返回纯能数组中第一个大于0 的位置。小于0 的位置一定不是良好出发点
+		// -1表示纯能数组所有都是小于0，没有一个位置是良好出发点
 		int init = changeDisArrayGetInit(cost, gas);
 		return init == -1 ? new boolean[cost.length] : enlargeArea(cost, init);
 	}
