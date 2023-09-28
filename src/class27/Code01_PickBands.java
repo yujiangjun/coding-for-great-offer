@@ -44,6 +44,7 @@ public class Code01_PickBands {
 	// [2, 9 , 50]
 	// ...
 	// ]
+	// 排序去重
 	public static int clean(int[][] programs) {
 		int x = 0;
 		int y = 0;
@@ -91,7 +92,7 @@ public class Code01_PickBands {
 			if (index != size) {
 				f(programs, size, index + 1, status, cost, rest, map);
 				int pick = 0 | (1 << programs[index][0]) | (1 << programs[index][1]);
-				if ((pick & status) == 0) {
+				if ((pick & status) == 0) {// 之前挑的乐队与当前挑的乐队都不同
 					f(programs, size, index + 1, status | pick, cost + programs[index][2], rest - 1, map);
 				}
 			}
@@ -99,6 +100,8 @@ public class Code01_PickBands {
 	}
 
 //	// 如果nums，2 * nums 只乐队
+	// 用二进制表示选了2*nums只乐队
+	//1<<(2*nums)-1
 //	// (1 << (nums << 1)) - 1
 //	// programs 洗数据 size
 //	// nums = 8   16只乐队
