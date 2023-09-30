@@ -40,20 +40,33 @@ public class Problem_0033_SearchInRotatedSortedArray {
 			// arr[M] != num
 			// [L] [M] [R] 不都一样的情况, 如何二分的逻辑
 			if (arr[L] != arr[M]) {
-				if (arr[M] > arr[L]) { // L...M 一定有序 
+				if (arr[M] > arr[L]) {
+					/*
+					[M]>[L],L-M 中间没有断点，所以原数组的断点是发生在M之前
+					最后重组后得到[M]>[L]
+					由此可以得出L-M是有序
+					 */
+					// L...M 一定有序
 					if (num >= arr[L] && num < arr[M]) { //  3  [L] == 1    [M]   = 5   L...M - 1
 						R = M - 1;
-					} else { // 9    [L] == 2    [M]   =  7   M... R
+					} else {
+						// 9    [L] == 2    [M]   =  7   M... R
 						L = M + 1;
 					}
-				} else { // [L] > [M]    L....M  存在断点
+				} else {
+					/*
+						[M]<[L],L-M 中间存在断点，所以原数组的断点是发生在M之后
+						最后重组后得到[M]<=[L]
+					 */
+					// [L] > [M]    L....M  存在断点
 					if (num > arr[M] && num <= arr[R]) {
 						L = M + 1;
 					} else {
 						R = M - 1;
 					}
 				}
-			} else { /// [L] [M] [R] 不都一样，  [L] === [M] -> [M]!=[R]
+			} else {
+				/// [L] [M] [R] 不都一样，  [L] === [M] -> [M]!=[R]
 				if (arr[M] < arr[R]) {
 					if (num > arr[M] && num <= arr[R]) {
 						L = M + 1;
