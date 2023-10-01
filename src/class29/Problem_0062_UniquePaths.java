@@ -6,6 +6,9 @@ public class Problem_0062_UniquePaths {
 	// n 列
 	// 下：m-1
 	// 右：n-1
+	// 所以从0,0位置出发到m-1,n-1的总步数是向右移动n-1,向下移动m-1
+	// 所以总路径=C(m-1)(m-1+n-1)*C(n-1)(m-1+n-1)=(m+n-2)!/((m-1)!*(n-1)!)
+	// 但是考虑到数值溢出的问题，在求解过程中需要使用最大公约数去约掉，保证不会数值溢出
 	public static int uniquePaths(int m, int n) {
 		int right = n - 1;
 		int all = m + n - 2;

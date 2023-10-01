@@ -27,4 +27,10 @@ public class Problem_0056_MergeIntervals {
 		return Arrays.copyOf(intervals, size);
 	}
 
+	public static void main(String[] args) {
+		int[][] data = {
+				{1,3},{2,6},{8,10},{15,18}
+		};
+		System.out.println(Arrays.toString(merge(data)));
+	}
 }
