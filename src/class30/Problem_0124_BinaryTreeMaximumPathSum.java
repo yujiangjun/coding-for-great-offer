@@ -19,6 +19,15 @@ public class Problem_0124_BinaryTreeMaximumPathSum {
 
 	}
 
+	/*
+	分情况：
+	1.不含root=求做左子树最大路径和和右子树最大路径和的最大值
+	2. 含root
+	   a.只含有root
+	   b. root+左子树从左子树根节点出发的最大路径和
+	   b. root+右子树从右节点根节点出发的最大路径和
+	   c.root+左子树从左子树根节点出发的最大路径和+右子树从右节点根节点出发的最大路径和
+	 */
 	public static int maxPathSum(TreeNode root) {
 		if (root == null) {
 			return 0;
